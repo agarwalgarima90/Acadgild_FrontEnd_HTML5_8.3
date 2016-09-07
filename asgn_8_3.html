@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 8.3</title>
+<style>
+	body {
+		text-align: center;
+		
+	}
+	input {
+		border: 1px solid red;
+		width: 20%;
+		height: 30px;
+	}
+	input[type="submit"] {
+		height: 30px;
+		background-color: lightblue;
+		width: 10%;
+		margin: 10px;
+		border: 1px solid blue;
+	}
+
+	
+</style>
+<script>
+	function test() {
+		var val = document.getElementById("range").value;
+		document.getElementById("age").innerHTML = val;
+	}
+</script>
+</head>
+<body>
+	<div>
+		Fill in the form
+	</div>
+	<br>
+	<form action="#">
+		<input type="email" placeholder="Email" autocomplete="off" required autofocus><br>
+		<input type="password" pattern=".{6,}" placeholder="Passsword" required><br>
+		<input type="url" placeholder="Your project URL" required><br>
+		<input type="date" placeholder="Project Completion Date" required><br>
+		<input type="month" placeholder="Current Month" required><br>
+		<input type="week" placeholder="Curent Week" required><br>
+		<input type="time" placeholder="Current time" required><br>
+		Select color: <input type="color" style="width:12%"><br>
+		Age: <input type="range" id="range" value="60" style="width:15%" onchange="test()" required><span id="age"></span><br>
+		Hobbies: <input list="hobbies" name="hobby" style="width:15%;height:40px">
+		<datalist id="hobbies">
+			<option value="Dancing">
+			<option value="Singing">
+			<option value="Painting">
+			<option value="Badminton">
+			<option value="Swimming">
+		</datalist><br>
+		<input type="submit" value="Submit Query">
+	</form>
+</body>
+</html>
